@@ -38,7 +38,7 @@ def step_impl(context, document):
 
 @given("The address is {lat} and {log}")
 def step_impl(context, lat, log):
-    context.partner.update({"address": {"type": "Point", "coordinates": [20.01, 20.02]}})
+    context.partner.update({"address": {"type": "Point", "coordinates": [float(lat), float(log)]}})
 
 
 @given("The coverage area is {coordinates}")
